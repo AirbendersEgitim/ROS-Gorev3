@@ -1,5 +1,5 @@
 
-# ROS-Gorev3
+# ROS-Görev3
 Bu görevde sizden telemetri verilerinizi eklemenizi ve bu verilerle bazı işlemler yapmanızı istiyoruz.
 Bu verileri mavros topiclerinden çekmeniz gerekiyor. [Kaynak](http://wiki.ros.org/mavros).
 
@@ -11,7 +11,13 @@ Buradan sonra aşağıda verilen konumlar bir txt dosyasından okunarak dronun b
 (41.0856095,29.0404048)
 (41.0852049,29.0413493)
 ```
-Gazebonun başlangıç konumunu Uçaksavar kampüsü olarak ayarlamak için aşağıdaki komutları Gazebo'yu çalıştırdığın terminale yazabilirsin.
+### Gazebo'yu çalıştırma
+```
+cd
+cd src/Firmware
+make px4_sitl gazebo
+```
+Gazebonun başlangıç konumunu Uçaksavar kampüsü olarak ayarlamak için aşağıdaki komutları Gazebo'yu çalıştırmadan önce terminale yazabilirsin.
 ```
 export PX4_HOME_LAT=41.0853187
 export PX4_HOME_LON=29.0409626
@@ -29,3 +35,6 @@ Bu veriler saniyede 1 kez terminale basılmalıdır.
 
 ## Özet
 Yazdığınız kod istenen global-lokal konum dönüşümünü hesaplamalı ve yukarıda istenen verileri drondan çekerek terminale yazdırmalıdır. Bunun için Qgroundcontrol ile dronun simülasyonda uçuşunu sağlayarak veri değişimlerini gözlemlemelisin.
+
+## Örnek
+![](https://github.com/AirbendersEgitim/ROS-Gorev3/blob/main/assets/Gorev3.gif)
